@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" id="WebApp_ID" version="3.1">
+  <display-name>day3-web-lab_lazy_eager_initialization</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+  </welcome-file-list>
+  <!-- servlet deployment tags -->
+  <servlet>
+  	<servlet-name>abc</servlet-name>
+  	<servlet-class>com.voting.pages.SecondServlet</servlet-class>
+  	<!-- To inform web container,
+  	 to start the life cycle of 2nd servlet at app deployment time -->
+  	<load-on-startup>1</load-on-startup>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>abc</servlet-name>
+  <url-pattern>/second</url-pattern>
+  </servlet-mapping>
+</web-app>
